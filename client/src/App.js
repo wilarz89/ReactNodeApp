@@ -44,9 +44,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+           
           </p>
           <a
             className="App-link"
@@ -54,13 +54,13 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            
           </a>
         </header>
         <p>{this.state.response}</p>
         <form onSubmit={this.handleSubmit}>
           <p>
-            <strong>Post to Server:</strong>
+            <strong>Make Phone Call:</strong>
           </p>
           <input
             type="text"
