@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import NumPad from 'react-numpad';
 import './App.css';
 
 class App extends Component {
@@ -55,17 +55,28 @@ class App extends Component {
             
           </a>
         </header>
+       
         <p>{this.state.response}</p>
         <form onSubmit={this.handleSubmit}>
           <p>
             <strong>Make Phone Call:</strong>
           </p>
-          <input
+
+          <NumPad.Number
+           onChange={(value) => { console.log('value', value)}}
+            label={'Total'}
+            decimal={0}
+            value={this.state.post}
+            
+            //onChange={e => this.setState({ post: e.target.value })}                                
+            />
+             <input
             type="text"
             value={this.state.post}
             onChange={e => this.setState({ post: e.target.value })}
-          />
-          <button type="submit">Submit</button>
+          /> 
+
+            <button type="submit">Submit</button>
         </form>
         <p>{this.state.responseToPost}</p>
       </div>

@@ -14,10 +14,17 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.post('/api/world', (req, res) => {
-  console.log(req.body);
+  if (req.body.post=="5551212") {
+    res.send(
+      `INVALID : ${req.body.post}`,
+    ); 
+  } else {
+   console.log(req.body);
   res.send(
-    `I received your POST request. This is what you sent me: ${req.body.post}`,
-  );
+    `LLAMANDO.. ${req.body.post}`,
+  ); 
+  }
+  
 });
 
 if (process.env.NODE_ENV === 'production') {
